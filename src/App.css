@@ -1,0 +1,207 @@
+ /* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+ .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+@import "/src/components/Chatting/chat.css";
+@import "/src/components/ThemeToggle/DarkTheme.css";
+@import "/src/components/ThemeToggle/LightTheme.css";
+
+
+/* HomePage Styling */
+
+.HomePageWrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+.imageWrapper {
+  
+  /* transform: scale(0.7); */
+  background-size: 50%;
+}
+.formImage {
+  transform: scale(0.7);
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  /* padding: 1%; */
+  /* width: 30%; */
+  max-width: 90%;
+  border-radius: 3mm;
+}
+.mainLabel {
+  justify-content: center;
+  /* margin-left: 40%; */
+  display: flex;
+  margin-top: 3%;
+  align-items: center;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  /* margin: 2%; */
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.inputBox {
+  margin-bottom: 1%
+}
+
+footer{
+  position:fixed;
+  display: none;
+  bottom:0;
+}
+
+/* Editor Page Styling */
+
+.aside{
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+}
+
+.asideInner{
+  flex: 1;
+}
+
+.connect {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.clientsList {
+  display: flex;
+  align-items:  center;
+  flex-wrap: wrap;
+  gap: 16%;
+}
+
+.client {
+  display: flex;
+  align-items:  center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.userName {
+  margin-top: 10px;
+}
+
+.logo {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logoImage {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  /* transform: scale(0.2); */
+}
+
+.Themebtn {
+  width: 98%;
+  padding: 2%;
+  margin: 1%;
+  font-size: 15px;
+}
+
+.Leavebtn {
+  width: 98%;
+  padding: 2%;
+  margin: 1%;
+  font-size: 15px;
+  background-color: rgb(38, 187, 33);
+  
+}
+
+.Leavebtn:hover {
+  background-color: rgb(196, 24, 24);
+
+}
+
+.Copybtn {
+  width: 98%;
+  padding: 2%;
+  margin: 1.5%;
+  font-size: 15px;
+}
+
+
+
+.CodeMirror {
+  font-size: 14px;
+  line-height: 1.4;
+  width: 100%;
+  min-height: 98vh;
+  max-width: 100%;
+  margin: 1vh;
+  border-radius: 3mm;
+}
+
+.mainWrap{
+  display: grid;
+  flex-wrap: column;
+  grid-template-columns: 15% 52% 33%;
+  /* grid-template-columns: 230px 1fr; */
+}
+
+.editorWrap {
+  /* margin-right: 10vh; */
+  display: flex;
+  /* border: 1px double rgb(73, 2, 64); */
+}
+
+.chatWrap {
+  margin: 1vh;
+  /* background-color: #8555d1; */
+  border-radius: 3mm;
+  display: grid;
+  /* flex-direction: column; */
+}
+

@@ -1,0 +1,56 @@
+.dark-theme .HomePageWrapper {
+    color: #ffffff;
+    background-color: rgb(29, 7, 126);
+}
+
+.dark-theme .themeButton {
+    background-color: rgb(14, 4, 4);
+    color: #ffffff;
+}
+
+.dark-theme .inputBox {
+    color: #ffffff;
+    background-color: rgb(4, 4, 48);
+}
+
+.dark-theme .ButtOn {
+    color: #ffffff;
+    background-color: rgb(4, 4, 48);
+}
+
+  /* Editor Page Styling */
+  .dark-theme .mainWrap {
+    background-color: rgb(14, 4, 4);
+  }
+  .dark-theme .Themebtn {
+    background-color: rgb(14, 4, 4);
+    color: #ffffff;
+  }
+  .dark-theme .Copybtn {
+    background-color: rgb(14, 4, 4);
+    color: #ffffff;
+  }
+
+  .dark-theme .formWrapper {
+    background: #948a04;
+  }
+
+  .dark-theme .aside{
+    color: rgb(209, 64, 190);
+  }
+  .dark-theme .Themebtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
+  }
+
+  .dark-theme .Copybtn:hover {
+    background-color: rgb(180, 175, 175);
+    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
+  }
+
+  .dark-theme .Leavebtn {
+    color: #ffffff;
+  }
+  .dark-theme .Leavebtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
+  }
+  
