@@ -1,56 +1,108 @@
 .dark-theme .HomePageWrapper {
     color: #ffffff;
-    background-color: rgb(29, 7, 126);
+    background-color: rgb(31, 16, 82);
 }
 
+.dark-theme .formWrapper {
+  background: #3cac4e;
+}
 .dark-theme .themeButton {
-    background-color: rgb(14, 4, 4);
+    background-color: rgb(43, 5, 5);
+    border-color: #d3c3c3;
     color: #ffffff;
 }
 
 .dark-theme .inputBox {
     color: #ffffff;
-    background-color: rgb(4, 4, 48);
+    border-color: #ece2e2;
+    background-color: rgb(31, 16, 82);
 }
 
 .dark-theme .ButtOn {
-    color: #ffffff;
-    background-color: rgb(4, 4, 48);
+    background-color: rgb(98, 199, 190);
 }
 
   /* Editor Page Styling */
   .dark-theme .mainWrap {
-    background-color: rgb(14, 4, 4);
+    background-color: rgb(31, 16, 82);
   }
-  .dark-theme .Themebtn {
-    background-color: rgb(14, 4, 4);
-    color: #ffffff;
-  }
-  .dark-theme .Copybtn {
-    background-color: rgb(14, 4, 4);
-    color: #ffffff;
-  }
-
-  .dark-theme .formWrapper {
-    background: #948a04;
+  .dark-theme .realtimeEditor {
+    border: 0.1rem solid transparent;
+    border-radius: 1rem;
+    border-color: aqua;
   }
 
   .dark-theme .aside{
     color: rgb(209, 64, 190);
   }
-  .dark-theme .Themebtn:hover {
-    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
-  }
 
-  .dark-theme .Copybtn:hover {
-    background-color: rgb(180, 175, 175);
-    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
+  .dark-theme .Themebtn {
+    background-color: rgb(61, 4, 58);
+    border-color: #d3c3c3;
+    color: #ffffff;
+  }
+  .dark-theme .Copybtn {
+    background-color: rgb(61, 4, 58);
+    border-color: #d3c3c3;
+    color: #ffffff;
   }
 
   .dark-theme .Leavebtn {
+    border-color: #d3c3c3;
     color: #ffffff;
   }
+  
+  .dark-theme .Themebtn:hover {
+    box-shadow: 0 0.5rem 0.5rem 0 rgba(255, 255, 255, 0.3), 0 0.5rem 0.5rem 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .dark-theme .Copybtn:hover {
+    background-color: lavender;
+    color: black;
+    box-shadow: 0 0.5rem 0.5rem 0 rgba(255, 255, 255, 0.3), 0 0.5rem 0.5rem 0 rgba(255, 255, 255, 0.3);
+  }
+
   .dark-theme .Leavebtn:hover {
-    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
+    box-shadow: 0 0.5rem 0.5rem 0 rgba(255, 255, 255, 0.3), 0 0.5rem 0.5rem 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .dark-theme .chat-header {
+    background: rgb(138, 12, 71);
+    color: antiquewhite;
+  }
+
+  .dark-theme .chat-messages{
+    background: rgb(61, 4, 58);
+    
+  }
+  .dark-theme .chat-messages .Message {
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    background-color: rgb(177, 17, 38);
+  }
+  .dark-theme .chat-messages .Message .meta span{
+    color: bisque;
+  }
+  .dark-theme .chat-messages .Message .text{
+    color: beige;
+  }
+
+  .dark-theme .chat-form-container {
+    background: rgb(138, 12, 71);
+  }
+
+  .dark-theme .chat-form-container input[type='text'] {
+    background: rgb(61, 4, 58);
+    color: lavenderblush;
+  }
+
+  .dark-theme .Send {
+    background: rgb(80, 76, 76);
+    color: aliceblue;
+  }
+
+  .dark-theme .Send:hover {
+    color: black;
+    background: lavender;
   }
   

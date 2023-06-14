@@ -6,8 +6,8 @@ import Editor from "../components/editor"
 import { initSocket } from '../socket';
 import {useLocation, useNavigate, Navigate, useParams} from 'react-router-dom';
 import Chat from '../components/Chatting/chat';
-import logoL from '../Onesan.png';
-import logoD from '../OnesanDark.png';
+import logoL from '../assets/Onesan.png';
+import logoD from '../assets/OnesanDark.png';
 
 const EditorPage = () => {
 
@@ -117,9 +117,11 @@ const EditorPage = () => {
                     ))}
                 </div>
             </div>
-        <button className="Themebtn" onClick={toggle}>Change Theme</button>
-        <button className="Copybtn" onClick={copyRoomId}>Copy Room ID</button>
-        <button className="Leavebtn" onClick={leaveRoom}>Leave Room</button>
+            <div className='buttons'>
+                <button className="Themebtn" onClick={toggle}>Change Theme</button>
+                <button className="Copybtn" onClick={copyRoomId}>Copy Room ID</button>
+                <button className="Leavebtn" onClick={leaveRoom}>Leave Room</button>
+            </div>
         </div>
             <div className="editorWrap">
                 <Editor socketRef = {socketRef} roomId={roomId} onCodeChange={(code) => {codeRef.current = code}}/>

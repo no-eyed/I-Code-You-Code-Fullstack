@@ -66,22 +66,20 @@ const Chat = ({socketRef, roomId}) => {
 
   return (
     <div className="chat-container">
-        <header className="chat-header">
-            <h3>Chatting</h3>
+        <div className="chat-header">
+            <h4>Chats will appear here</h4>
             
-        </header>
-        <main>
-            <div className="chat-messages">
+        </div>
+        <div className="chat-messages">
             {MessagesFromAll.map((message) => (
               <div className="Message">
                 <p className="meta">
-                  {message.username} <span>{message.time}</span>
+                  <span>{message.username}</span> <span>{message.time}</span>
                 </p>
                 <p className="text">{message.text}</p>
               </div>
             ))}
-            </div>
-        </main>
+        </div>
         
         
         <div className="chat-form-container">

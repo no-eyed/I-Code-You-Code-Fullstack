@@ -4,6 +4,7 @@ import ACTIONS  from '../Actions';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/theme/dracula.css';
+import 'codemirror/theme/erlang-dark.css';
 import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
 
@@ -15,6 +16,7 @@ const Editor = ({socketRef, roomId, onCodeChange}) => {
            editorRef.current = Codemirror.fromTextArea(document.getElementById('realtimeEditor'), {
                 mode: {name: 'javascript', json: true},
                 autoCloseTags: true,
+                theme: 'erlang-dark',
                 autoCloseBrackets: true,
                 lineNumbers: true,
            });

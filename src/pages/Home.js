@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {v4 as uuidv4} from 'uuid';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import logoL from '../Onesan.png';
-import logoD from '../OnesanDark.png';
+import logoL from '../assets/Onesan.png';
+import logoD from '../assets/OnesanDark.png';
 
 const Home = () => {
 
@@ -64,7 +64,7 @@ const Home = () => {
     return (
         <div className="HomePageWrapper">
             <div className="imageWrapper">
-              <img className="formImage" src={logo} alt=" Image Unavailabel!"></img>
+              <img className="formImage" src={logo} alt=" Image Unavailable!"></img>
             </div>
             <div className="formWrapper">
                 <h4 className="mainLabel">Login from Here</h4>
@@ -82,7 +82,10 @@ const Home = () => {
                 </div>
             </div>
 
-            <button className="themeButton" onClick={toggle}>Change Theme</button>
+            <div className="themeWrapper">
+              <button className="themeButton" onClick={toggle}>Change Theme</button>
+            </div>
+            
             <footer>
                 <h4>Built with StandoSkai</h4>
             </footer>

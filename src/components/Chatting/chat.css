@@ -1,59 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-:root {
-	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
-	--light-color: #e6e9ff;
-	--success-color: #5cb85c;
-	--error-color: #d9534f;
-}
-
-.Send {
-	cursor: pointer;
-	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
-	border: 0;
-	font-size: 17px;
-	border-radius: 1mm;
-}
-
-.Send:hover {
-	background-color: rgb(80, 76, 76);
-	
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-
-}
-
 .chat-container {
-	background: #93d493;
+	background: transparent;
 	display: grid;
 	/* margin: 30px auto; */
-	/* flex-direction: column; */
-	overflow: hidden;
-	border-radius: 3mm;
+	grid-template-rows: 10% 80% 10%;
+	flex-direction: column;
+	overflow: auto;
+	height: 98vh;
+	border-radius: 1rem;
 }
 
 .chat-header {
-	background: var(--dark-color-a);
-	color: lavender;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
 	display: grid;
 	align-items: center;
 	justify-content: center;
-}
-
-.chat-main {
-	display: grid;
-	grid-template-columns: 1fr 3fr;
+	background-color: aquamarine;
 }
 
 .chat-messages {
 	/* padding: 30px; */
-	max-height: 81.5vh;
 	overflow-y: auto;
-	min-height: 81.5vh;
+	min-height: 81.5%;
 	display: flex;
 	flex-direction: column;
 }
@@ -61,44 +29,55 @@
 .chat-messages .Message {
 	padding: 2%;
 	margin-top: 2%;
-	margin-left: 1%;
+	margin-left: 0.8%;
+	margin-right: 0.8%;
 	/* margin-bottom: 2%; */
-	background-color: var(--light-color);
-	border-radius: 5px;
-	justify-content: space-between;
+	border-radius: 1%;
 }
 
 .chat-messages .Message .meta {
-	font-size: 15px;
 	font-weight: bold;
-	color: var(--dark-color-b);
 	opacity: 0.7;
 	margin-bottom: 2%;
 	margin-top: 2%;
-	
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .chat-messages .Message .meta span {
-	color: #777;
-	/* justify-content: space-between; */
+	justify-content: space-between;
 }
 
 .chat-form-container {
 	display: flex;
 	flex-direction: column-reverse;
 	padding: 3% 3%;
-	background-color: var(--dark-color-a);
-	/* height: 5%; */
 }
 
 .chat-form-container form {
 	padding: 2%;
 	display: flex;
+	overflow: auto;
 }
 
 .chat-form-container input[type='text'] {
-	font-size: 16px;
 	padding: 1%;
 	/* height: 50%; */
 	flex: 1;
+}
+
+.Send {
+	cursor: pointer;
+	padding: 0.1rem 2rem;
+	background: lavender;
+	border: 0;
+	border-radius: 0.3rem;
+}
+
+.Send:hover {
+	background-color: rgb(80, 76, 76);
+	
+	box-shadow: 0 3rem 4rem 0 rgba(0,0,0,0.24), 0 4rem 5rem 0 rgba(0,0,0,0.19);
+
 }
