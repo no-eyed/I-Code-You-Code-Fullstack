@@ -96,7 +96,7 @@ footer{
   display: flex;
   align-items:  center;
   flex-wrap: wrap;
-  gap: 16%;
+  gap: 8%;
 }
 
 .client {
@@ -107,7 +107,7 @@ footer{
 }
 
 .userName {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .logo {
