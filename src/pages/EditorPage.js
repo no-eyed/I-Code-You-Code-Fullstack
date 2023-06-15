@@ -6,8 +6,10 @@ import Editor from "../components/editor"
 import { initSocket } from '../socket';
 import {useLocation, useNavigate, Navigate, useParams} from 'react-router-dom';
 import Chat from '../components/Chatting/chat';
-import logoL from '../assets/Onesan.png';
-import logoD from '../assets/OnesanDark.png';
+// import logoL from '../assets/Onesan.png';
+// import logoD from '../assets/OnesanDark.png';
+import logoL from '../assets/DudeLight.png';
+import logoD from '../assets/DudeDark.png';
 
 const EditorPage = () => {
 
