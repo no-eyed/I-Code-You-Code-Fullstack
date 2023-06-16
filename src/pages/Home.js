@@ -33,7 +33,6 @@ const Home = () => {
       e.preventDefault();
   
       const id = uuidv4();
-      // console.log(id);
   
       setRoomId(id);
   
@@ -58,7 +57,6 @@ const Home = () => {
   
 
     const handleInputEnter = (e) => {
-        console.log('event', e.code);
         if(e.code === 'Enter') {
             joinRoom();
         }

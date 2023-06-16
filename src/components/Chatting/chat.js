@@ -1,41 +1,12 @@
 import React, {useState, useRef, useEffect} from 'react'
+import Message from './Message';
 
-const Chat = ({socketRef, roomId}) => {
-    const [message, setMessage] = useState("");
+export const Chat = ({socketRef, roomId}) => {
+    const [message, setMessage] = useState('');
+    const [Id, setId] = useState(0);
     const [MessagesFromAll, setMessagesFromAll] = useState([]);
 
     //const messageRef = useRef(null);
-
-    const handleInputMsg = (event) => {
-      event.preventDefault();
-      setMessage(event.target.value);
-    }
-
-    function handleMessageSending(event) {
-      event.preventDefault();
-
-      socketRef.current.emit("chatMessage", {roomId:roomId, message:message});
-      setMessage('');
-      console.log(MessagesFromAll);
-
-      scrollfunc()
-      //messageRef.current.value = "";
-    }
-
-    useEffect(() => {
-      if(socketRef.current) {
-        socketRef.current.on('Message', message => {
-          //console.log(message);
-          setMessagesFromAll(MessagesFromAll =>[...MessagesFromAll, message]);
-        })
-        console.log(MessagesFromAll);
-        return () => {
-          socketRef.current.off('Message');
-        }
-      }
-    }, [socketRef.current]);
-
-
     const chatMessagesRef = useRef(null);
 
     const scrollfunc = () => {
@@ -64,28 +35,56 @@ const Chat = ({socketRef, roomId}) => {
       }
     };
 
+    const handleInputMsg = (event) => {
+      event.preventDefault();
+      setMessage(event.target.value);
+    }
+
+    function handleMessageSending(event) {
+      event.preventDefault();
+
+      if (message.trim() !== ''){
+      socketRef.current.emit("chatMessage", { roomId:roomId, message:message});
+      setMessage('');
+      setId(Id + 1);
+      }
+
+      scrollfunc();
+      //messageRef.current.value = "";
+    }
+
+    useEffect(() => {
+      if(socketRef.current) {
+        socketRef.current.on('Message', message => {
+          setMessagesFromAll(MessagesFromAll =>[...MessagesFromAll, message]);
+        })
+        return () => {
+          socketRef.current.off('Message');
+        }
+      }
+    }, [socketRef.current]);
+
   return (
     <div className="chat-container">
         <div className="chat-header">
             <h4>Chats will appear here</h4>
             
         </div>
-        <div className="chat-messages">
+        <div className="chat-messages" ref={chatMessagesRef}>
             {MessagesFromAll.map((message) => (
-              <div className="Message">
-                <p className="meta">
-                  <span>{message.username}</span> <span>{message.time}</span>
-                </p>
-                <p className="text">{message.text}</p>
-              </div>
+              // <div key={message.id} className="Message">
+              //   <p className="meta">
+              //     <span>{message.username}</span> <span>{message.time}</span>
+              //   </p>
+              //   <p className="text">{message.text}</p>
+              // </div>
+              <Message userName={message.username} Time={message.time} Text={message.text}/>
             ))}
         </div>
         
-        
         <div className="chat-form-container">
             <form className="chat-form">
-                <input value = {message} className="message" type="text" placeholder="Enter Message"
-                onChange={handleInputMsg} /> 
+                <input value = {message} className="message" type="text" placeholder="Enter Message" required onChange={handleInputMsg} /> 
                 <button className="Send" onClick={handleMessageSending}>Send</button>
             </form>
       </div>

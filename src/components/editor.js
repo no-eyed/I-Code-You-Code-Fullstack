@@ -22,7 +22,6 @@ const Editor = ({socketRef, roomId, onCodeChange}) => {
            });
            
            editorRef.current.on('change', (instance, changes) => {
-              console.log('changes', changes);
               const {origin} = changes;
               const code = instance.getValue();
               onCodeChange(code);
@@ -33,12 +32,7 @@ const Editor = ({socketRef, roomId, onCodeChange}) => {
 
                 })
               }
-              console.log(code);
            })
-
-           
-
-          //  editorRef.current.setValue('console.log');
         }
 
         init();
@@ -47,7 +41,6 @@ const Editor = ({socketRef, roomId, onCodeChange}) => {
     useEffect(() => {
       if(socketRef.current) {
           socketRef.current.on(ACTIONS.CODE_CHANGE, ({code}) => {
-            console.log('Chal raha h', code);
             if(code !== null) {
                 editorRef.current.setValue(code);
             }
