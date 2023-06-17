@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .imageWrapper {
   align-items: center;
@@ -29,6 +30,7 @@
   width: 50%;
   border-radius: 1rem;
   max-width: 1000px;
+  min-width: 300px;
 }
 .mainLabel {
   justify-content: center;
@@ -46,7 +48,14 @@
   padding-right: 3%;
 }
 .inputBox {
-  margin-bottom: 1%
+  margin-bottom: 1%;
+  height: 3vh;
+  min-height: 30px;
+  border-radius: 0.5rem;
+}
+.ButtOn {
+  height: 3vh;
+  min-height: 30px;
 }
 
 .themeWrapper {
@@ -78,6 +87,7 @@ footer{
   flex-direction: column;
   height: auto;
   overflow: auto;
+  overflow-x: scroll;
   max-height: 100vh;
 }
 
@@ -178,6 +188,7 @@ footer{
   border-radius: 1rem;
   font-size: 0.85rem;
   background: transparent;
+  overflow: auto;
 }
 
 @media screen and (max-width : 1010px) {
@@ -185,12 +196,7 @@ footer{
     width: 60vw;
   }
 
-  .aside {
-    overflow: auto;
-  }
-
   .chatWrap {
-    overflow: scroll;
     font-size: 0.8rem;
   }
 }
