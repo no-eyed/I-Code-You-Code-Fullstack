@@ -82,4 +82,4 @@ io.on('connection', (socket) => {
 });
 
 const PORT = 5555 || process.env.PORT ;
-server.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+server.listen(PORT);

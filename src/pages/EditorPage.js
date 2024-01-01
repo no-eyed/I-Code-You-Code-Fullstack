@@ -103,6 +103,7 @@ const EditorPage = () => {
 
   return (
     <div className='mainWrap' >
+        <div className="bodyWrap">
         <div className="aside">
             <div className="asideInner">
                 <div className="logo">
@@ -118,19 +119,19 @@ const EditorPage = () => {
                     ))}
                 </div>
             </div>
-            <div className='buttons'>
-                <button className="Themebtn" onClick={toggle}>Change Theme</button>
-                <button className="Copybtn" onClick={copyRoomId}>Copy Room ID</button>
-                <button className="Leavebtn" onClick={leaveRoom}>Leave Room</button>
-            </div>
         </div>
             <div className="editorWrap">
                 <Editor socketRef = {socketRef} roomId={roomId} onCodeChange={(code) => {codeRef.current = code}}/>
             </div>
                 
             <div className="chatWrap"> 
-                {/* Tik Tok Prince. Tik Tok. */}
                 <Chat socketRef = {socketRef} roomId={roomId}/>
+            </div>
+        </div>
+            <div className='buttons'>
+                <button className="Themebtn" onClick={toggle}>Change Theme</button>
+                <button className="Copybtn" onClick={copyRoomId}>Copy Room ID</button>
+                <button className="Leavebtn" onClick={leaveRoom}>Leave Room</button>
             </div>      
     </div>
   );
