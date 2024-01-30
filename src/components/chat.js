@@ -1,12 +1,11 @@
 import React, {useState, useRef, useEffect} from 'react'
 import Message from './Message';
 
-export const Chat = ({socketRef, roomId}) => {
+export const Chat = ({socketRef, roomId, uName}) => {
     const [message, setMessage] = useState('');
     const [Id, setId] = useState(0);
     const [MessagesFromAll, setMessagesFromAll] = useState([]);
 
-    //const messageRef = useRef(null);
     const chatMessagesRef = useRef(null);
 
     const scrollfunc = () => {
@@ -43,6 +42,7 @@ export const Chat = ({socketRef, roomId}) => {
     function handleMessageSending(event) {
       event.preventDefault();
 
+      console.log(uName);
       if (message.trim() !== ''){
       socketRef.current.emit("chatMessage", { roomId:roomId, message:message});
       setMessage('');
@@ -68,17 +68,11 @@ export const Chat = ({socketRef, roomId}) => {
     <div className="chat-container">
         <div className="chat-header">
             <h4>Chats will appear here</h4>
-            
         </div>
         <div className="chat-messages" ref={chatMessagesRef}>
             {MessagesFromAll.map((message) => (
-              // <div key={message.id} className="Message">
-              //   <p className="meta">
-              //     <span>{message.username}</span> <span>{message.time}</span>
-              //   </p>
-              //   <p className="text">{message.text}</p>
-              // </div>
-              <Message userName={message.username} Time={message.time} Text={message.text}/>
+              <Message key={message.id} userName={message.username === uName ? `You`: message.username} Time={message.time} Text={message.text} isUserMessage={message.username === uName}
+            />
             ))}
         </div>
         

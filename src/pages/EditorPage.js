@@ -29,7 +29,6 @@ const EditorPage = () => {
         toggleTheme();
         toggleLogo();
     }
-    const themeRef = useRef(null); 
 
     useEffect(() => {
         document.body.className = `${theme}-theme`;
@@ -95,9 +94,9 @@ const EditorPage = () => {
         reactNavigator('/');
     }
 
-    if(!location.state) {
-        return <Navigate to="/"/>
-    }
+    // if(!location.state) {
+    //     return <Navigate to="/"/>
+    // }
 
   return (
     <div className='mainWrap' >
@@ -105,7 +104,7 @@ const EditorPage = () => {
         <div className="aside">
             <div className="asideInner">
                 <div className="logo">
-                    <img className="logoImage" src={logo} alt="image = ?"/>
+                    <img className="logoImage" src={logo} alt="Logo"/>
                 </div>
                  <h3 className="connect">Connected</h3>
                 <div className="clientsList">
@@ -123,7 +122,7 @@ const EditorPage = () => {
             </div>
                 
             <div className="chatWrap"> 
-                <Chat socketRef = {socketRef} roomId={roomId}/>
+                <Chat socketRef = {socketRef} roomId={roomId} uName={location.state?.username}/>
             </div>
         </div>
             <div className='buttons'>

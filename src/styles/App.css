@@ -22,7 +22,6 @@
 .formWrapper {
   display: flex;
   flex-direction: column;
-  /* padding: 1%; */
   align-items: center;
   justify-content: center;
   width: 50%;
@@ -32,7 +31,6 @@
 }
 .mainLabel {
   justify-content: center;
-  /* margin-left: 40%; */
   display: flex;
   margin-top: 3%;
   align-items: center;
@@ -40,7 +38,6 @@
 .inputGroup {
   display: flex;
   flex-direction: column;
-  /* margin: 2%; */
   padding-bottom: 3%;
   padding-left: 3%;
   padding-right: 3%;
@@ -64,7 +61,6 @@
 
 footer{
   height: 1vh;
-  /* position:fixed; */
   display: none;
 }
 
@@ -89,7 +85,7 @@ footer{
   line-height: 1.4;
   width: 100%;
   height: auto;
-  min-height: 98vh;
+  min-height: 98.2vh;
   max-width: 100%;
   border-radius: 3mm;
 }
@@ -100,7 +96,9 @@ footer{
 }
 
 .chatWrap {
-  margin: 0.5vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5vh 0.3vw 0.5vh;
   border-radius: 1rem;
   font-size: 0.85rem;
   background: transparent;

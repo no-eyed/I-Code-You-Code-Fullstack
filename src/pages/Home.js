@@ -40,7 +40,7 @@ const Home = () => {
   
     const joinRoom = () =>{
       if(!roomId || !username){
-        toast.error("RoomId and username are required you loser");
+        toast.error("RoomId and username are required to join the room");
       }
       else{
       navigate(`/editor/${roomId}`,{
@@ -62,7 +62,7 @@ const Home = () => {
     return (
         <div className="HomePageWrapper">
             <div className="imageWrapper">
-              <img className="formImage" src={logo} alt=" Image Unavailable!"></img>
+              <img className="formImage" src={logo} alt="Unavailable!"></img>
             </div>
             <div className="formWrapper">
                 <h4 className="mainLabel">Login from Here</h4>
@@ -75,7 +75,7 @@ const Home = () => {
                     <button className="ButtOn" onClick={joinRoom}>Join Room</button>
 
                     <span className="createInfo">If you do not have a Room Id  you can create your own,
-                    Or get a random one using  <a onClick={createNewRoom} href="" className="createNewBtn">Create New RoomId</a></span>
+                    Or get a random one using <a onClick={createNewRoom} href="/" className="createNewBtn">Create New RoomId</a></span>
 
                 </div>
             </div>
