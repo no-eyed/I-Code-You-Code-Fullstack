@@ -3,7 +3,6 @@
 .chat-container {
 	background: transparent;
 	display: grid;
-	/* margin: 30px auto; */
 	grid-template-rows: 7% 86% 7%;
 	flex-direction: column;
 	overflow: auto;
@@ -74,7 +73,6 @@ h4 {
 
 .chat-form-container input[type='text'] {
 	padding: 1%;
-	/* height: 50%; */
 	flex: 1;
 }
 

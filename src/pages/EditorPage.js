@@ -1,15 +1,13 @@
 import React, {useState, useRef, useEffect} from 'react'
 import toast from "react-hot-toast";
-import ACTIONS  from '../Actions';
+import ACTIONS  from '../utils/Actions';
 import Client from '../components/Client';
 import Editor from "../components/editor"
 import { initSocket } from '../socket';
 import {useLocation, useNavigate, Navigate, useParams} from 'react-router-dom';
-import Chat from '../components/Chatting/chat';
-// import logoL from '../assets/Onesan.png';
-// import logoD from '../assets/OnesanDark.png';
-import logoL from '../assets/DudeLight.png';
-import logoD from '../assets/DudeDark.png';
+import Chat from '../components/chat';
+import logoLight from '../assets/LogoLight.png';
+import logoDark from '../assets/LogoDark.png';
 
 const EditorPage = () => {
 
@@ -23,10 +21,10 @@ const EditorPage = () => {
     ]);
 
     const[theme, setTheme] = useState('light');
-    const[logo, setLogo] = useState(logoD);
+    const[logo, setLogo] = useState(logoDark);
     
     const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
-    const toggleLogo = () => setLogo(logo === logoD ? logoL: logoD);
+    const toggleLogo = () => setLogo(logo === logoDark ? logoLight: logoDark);
     const toggle = () => {
         toggleTheme();
         toggleLogo();

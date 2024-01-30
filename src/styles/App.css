@@ -1,8 +1,6 @@
-@import "/src/components/Chatting/chat.css";
-@import "/src/components/ThemeToggle/DarkTheme.css";
-@import "/src/components/ThemeToggle/LightTheme.css";
-
-
+@import "./chat.css";
+@import "./darkTheme.css";
+@import "./lightTheme.css";
 /* HomePage Styling */
 
 .HomePageWrapper {
@@ -97,7 +95,6 @@ footer{
 }
 
 .editorWrap {
-  /* margin-right: 10vh; */
   display: flex;
   padding: 0.5rem;
 }

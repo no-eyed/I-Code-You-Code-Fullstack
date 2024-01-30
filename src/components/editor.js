@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, socketRef} from 'react';
 import Codemirror from 'codemirror';
-import ACTIONS  from '../Actions';
+import ACTIONS  from '../utils/Actions';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/theme/dracula.css';

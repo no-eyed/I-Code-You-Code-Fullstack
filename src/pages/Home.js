@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {v4 as uuidv4} from 'uuid';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import logoL from '../assets/DudeLight.png';
-import logoD from '../assets/DudeDark.png';
+import logoL from '../assets/LogoLight.png';
+import logoD from '../assets/LogoDark.png';
 
 const Home = () => {
 
