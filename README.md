@@ -1,4 +1,4 @@
-# Collaborative Code Editor with Chat
+# I Code You Code
 
 This project is a real-time collaborative code editor with a chat feature. It allows multiple users to join a room, edit code together, and communicate through a chat interface.
 
