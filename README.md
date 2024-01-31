@@ -1,6 +1,6 @@
 # I Code You Code
 
-![Alt text](src/assets/Logo.png)
+![Alt text](src/assets/Logo.png | width=100)
 
 This project is a real-time collaborative code editor with a chat feature. It allows multiple users to join a room, edit code together, and communicate through a chat interface.
 
