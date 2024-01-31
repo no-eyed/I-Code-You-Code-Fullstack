@@ -1,6 +1,7 @@
-# I Code You Code 
+# I Code You Code
 
-![Alt text](SmallerLogo-2.png)
+<img align="center">
+![Alt text](src/assets/Logo.png)
 
 This project is a real-time collaborative code editor with a chat feature. It allows multiple users to join a room, edit code together, and communicate through a chat interface.
 
@@ -41,4 +42,9 @@ The project is structured as follows:
 3. Run the development server:
 
     ```bash
-    npm run start
+    npm start
+
+4. Start the backend:
+
+    ```bash
+    node server.js
