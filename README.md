@@ -32,7 +32,11 @@ The project is structured as follows:
    git clone https://github.com/no-eyed/I-Code-You-Code-Fullstack.git
 
 2. Install dependencies:
+
+    ```bash
     npm install
 
 3. Run the development server:
+
+    ```bash
     npm run start
