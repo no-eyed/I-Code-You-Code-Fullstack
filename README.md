@@ -1,4 +1,4 @@
-# I Code You Code
+# I Code, You Code
 
 <!-- ![Alt text](src/assets/Logo.png) -->
 <img src='src/assets/Logo.png' width='200'>
