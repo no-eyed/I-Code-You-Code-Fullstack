@@ -29,4 +29,10 @@ The project is structured as follows:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/collaborative-code-editor.git
+   git clone https://github.com/no-eyed/I-Code-You-Code-Fullstack.git
+
+2. Install dependencies:
+    npm install
+
+3. Run the development server:
+    npm run start
