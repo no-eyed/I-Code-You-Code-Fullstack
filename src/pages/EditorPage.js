@@ -2,12 +2,10 @@ import React, {useState, useRef, useEffect} from 'react'
 import { initSocket } from '../socket';
 import toast from "react-hot-toast";
 import ACTIONS  from '../utils/Actions';
-
 import Client from '../components/Client';
 import Editor from "../components/Editor"
 import Chat from '../components/Chat';
 import {useLocation, useNavigate, Navigate, useParams} from 'react-router-dom';
-
 import logoLight from '../assets/LogoLight.png';
 import logoDark from '../assets/LogoDark.png';
 

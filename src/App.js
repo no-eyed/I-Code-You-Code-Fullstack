@@ -1,8 +1,7 @@
-//import logo from './logo.svg';
 import './styles/App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import EditorPage from './pages/EditorPage';
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
 import {Toaster} from 'react-hot-toast'
 
 function App() {
