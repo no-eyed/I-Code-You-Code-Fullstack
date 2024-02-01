@@ -1,11 +1,13 @@
 import React, {useState, useRef, useEffect} from 'react'
+import { initSocket } from '../socket';
 import toast from "react-hot-toast";
 import ACTIONS  from '../utils/Actions';
+
 import Client from '../components/Client';
-import Editor from "../components/editor"
-import { initSocket } from '../socket';
+import Editor from "../components/Editor"
+import Chat from '../components/Chat';
 import {useLocation, useNavigate, Navigate, useParams} from 'react-router-dom';
-import Chat from '../components/chat';
+
 import logoLight from '../assets/LogoLight.png';
 import logoDark from '../assets/LogoDark.png';
 
@@ -43,7 +45,7 @@ const EditorPage = () => {
             socketRef.current.on('connect_failed',(err) => handleErrors(err));
 
             function handleErrors(e){
-                console.log("socket error", e);
+                console.log("Socket error", e);
                 toast.error("Socket connection failed, try again later");
                 reactNavigator('/');
             }
@@ -94,9 +96,9 @@ const EditorPage = () => {
         reactNavigator('/');
     }
 
-    // if(!location.state) {
-    //     return <Navigate to="/"/>
-    // }
+    if(!location.state) {
+        return <Navigate to="/"/>
+    }
 
   return (
     <div className='mainWrap' >
