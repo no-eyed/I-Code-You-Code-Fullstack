@@ -67,7 +67,7 @@ export const Chat = ({socketRef, roomId, uName}) => {
   return (
     <div className="chat-container">
         <div className="chat-header">
-            <h4>Chats will appear here</h4>
+            <h4>Chatbox</h4>
         </div>
         <div className="chat-messages" ref={chatMessagesRef}>
             {MessagesFromAll.map((message) => (
