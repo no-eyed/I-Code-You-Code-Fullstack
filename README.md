@@ -49,4 +49,4 @@ The project is structured as follows:
 4. Start the backend:
 
     ```bash
-    node server.js
+    npm run server:dev
