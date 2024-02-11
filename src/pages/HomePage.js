@@ -70,7 +70,7 @@ const Home = () => {
                     <input type="text" className="inputBox" onChange={(e) => setUserName(e.target.value)} value={username} placeholder='Write your Username Here'></input>
 
                     <input type="text" className="inputBox" onChange={(e) => setRoomId(e.target.value)} value={roomId} onKeyUp={handleInputEnter}
-                    placeholder='Wrtie Room Id here'></input>
+                    placeholder='Write Room Id here'></input>
 
                     <button className="ButtOn" onClick={joinRoom}>Join Room</button>
 
