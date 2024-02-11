@@ -50,3 +50,5 @@ The project is structured as follows:
 
     ```bash
     npm run server:dev
+
+5. Now open your browser and visit http://localhost:3000.
